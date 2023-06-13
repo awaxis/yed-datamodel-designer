@@ -3047,11 +3047,11 @@ Toutes les autres tables héritent les champs de cette table de référence]]></
         </node>
       </graph>
     </node>
-    <node id="n21" yfiles.foldertype="group">
+    <node id="n21" yfiles.foldertype="folder">
       <data key="d26" xml:space="preserve"/>
       <data key="d28">
         <y:ProxyAutoBoundsNode>
-          <y:Realizers active="0">
+          <y:Realizers active="1">
             <y:GroupNode>
               <y:Geometry height="670.0552438244924" width="1100.0982607409844" x="789.3168699980014" y="-1063.4811372166168"/>
               <y:Fill hasColor="false" transparent="false"/>
@@ -3331,6 +3331,141 @@ Toutes les autres tables héritent les champs de cette table de référence]]></
             </node>
           </graph>
         </node>
+        <edge id="n21::e0" source="n21::n0" target="n21::n2">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="82.54145805642631" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e1" source="n21::n2" target="n21::n1">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="crows_foot_many" target="dash"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e2" source="n21::n2" target="n21::n5">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.05103370517088024" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="crows_foot_many" target="dash"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e3" source="n21::n3" target="n21::n2">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="-3.031671779711246" sy="3.160815179169731" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e4" source="n21::n5" target="n21::n6">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many_optional"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e5" source="n21::n5" target="n21::n0">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many_optional"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e6" source="n21::n6" target="n21::n1">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many_optional"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e7" source="n21::n6" target="n21::n4">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_optional"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::e8" source="n21::n6" target="n21::n0">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="line" width="3.0"/>
+              <y:Arrows source="dash" target="crows_foot_many_optional"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::n7::e0" source="n21::n7::n0" target="n21::n7::n1">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#808080" type="line" width="2.0"/>
+              <y:Arrows source="dash" target="crows_foot_many"/>
+              <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="12.865234375" x="102.51753754016704" xml:space="preserve" y="-27.1030818079073">N<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="18.036645925925995" distanceToCenter="true" position="left" ratio="1.0" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+              <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="11.587890625" x="7.44650928700753" xml:space="preserve" y="-27.213274558649005">1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="9.080432426667585" distanceToCenter="false" position="left" ratio="0.02468679757176288" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::n7::e1" source="n21::n7::n5" target="n21::n7::n2">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#808080" type="line" width="2.0"/>
+              <y:Arrows source="dash" target="crows_foot_many_optional"/>
+              <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.328125" x="73.64669487268225" xml:space="preserve" y="-23.51405135971936">0 or N<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="5.3812334537037705" distanceToCenter="false" position="left" ratio="0.9798998593087158" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::n7::e2" source="n21::n7::n6" target="n21::n7::n3">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#808080" type="line" width="2.0"/>
+              <y:Arrows source="dash" target="dash"/>
+              <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="11.587890625" x="101.03841895813116" xml:space="preserve" y="-28.299368763382972">1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="10.166575083333106" distanceToCenter="false" position="left" ratio="0.9720969431186387" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n21::n7::e3" source="n21::n7::n7" target="n21::n7::n4">
+          <data key="d32">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#808080" type="line" width="2.0"/>
+              <y:Arrows source="dash" target="crows_foot_optional"/>
+              <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="39.05078125" x="74.08308846367095" xml:space="preserve" y="-25.723505128128863">0 or 1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="7.590674638888915" distanceToCenter="false" position="left" ratio="0.9684693048040418" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
       </graph>
     </node>
     <node id="n22" yfiles.foldertype="group">
@@ -3607,497 +3742,17 @@ Toutes les autres tables héritent les champs de cette table de référence]]></
         </node>
       </graph>
     </node>
-    <node id="n24" yfiles.foldertype="folder">
+    <node id="n24">
       <data key="d26" xml:space="preserve"/>
+      <data key="d27"/>
       <data key="d28">
-        <y:ProxyAutoBoundsNode>
-          <y:Realizers active="1">
-            <y:GroupNode>
-              <y:Geometry height="3891.836974180608" width="2292.0249369317285" x="1955.5649402000467" y="-1420.8424632910344"/>
-              <y:Fill hasColor="false" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="node_width" borderDistance="0.0" bottomInset="4" fontFamily="Dialog" fontSize="16" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="26.84375" horizontalTextPosition="center" iconTextGap="4" leftInset="4" modelName="internal" modelPosition="t" rightInset="4" textColor="#000000" topInset="4" verticalTextPosition="bottom" visible="true" width="2292.0249369317285" x="0.0" xml:space="preserve" y="0.0">DataModel Exporter (with JMeter)</y:NodeLabel>
-              <y:Shape type="roundrectangle"/>
-              <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
-              <y:NodeBounds considerNodeLabelSize="true"/>
-              <y:Insets bottom="4" bottomF="4.0" left="4" leftF="4.0" right="4" rightF="4.0" top="4" topF="4.0"/>
-              <y:BorderInsets bottom="4" bottomF="4.0" left="11" leftF="11.35958911016678" right="0" rightF="0.0" top="0" topF="0.0"/>
-            </y:GroupNode>
-            <y:GroupNode>
-              <y:Geometry height="114.13281250000011" width="327.4752579797166" x="1955.5649402000467" y="-1420.8424632910344"/>
-              <y:Fill hasColor="false" transparent="false"/>
-              <y:BorderStyle hasColor="false" type="dotted" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="node_width" borderDistance="0.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="327.4752579797166" x="0.0" xml:space="preserve" y="0.0">DataModel Exporter (with JMeter)</y:NodeLabel>
-              <y:Shape type="rectangle"/>
-              <y:State closed="true" closedHeight="114.13281250000011" closedWidth="327.4752579797166" innerGraphDisplayEnabled="true"/>
-              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
-              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
-            </y:GroupNode>
-          </y:Realizers>
-        </y:ProxyAutoBoundsNode>
+        <y:UMLNoteNode>
+          <y:Geometry height="30.0" width="434.9959182445141" x="789.3168699980014" y="-863.0536501921428"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="409.328125" x="4.0" xml:space="preserve" y="4.0">More detail on https://github.com/awaxis/yed-datamodel-designer/<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+        </y:UMLNoteNode>
       </data>
-      <graph edgedefault="directed" id="n24:">
-        <node id="n24::n0">
-          <data key="d26" xml:space="preserve"/>
-          <data key="d27"/>
-          <data key="d28">
-            <y:UMLClassNode>
-              <y:Geometry height="3813.3091979101337" width="1046.9849278996867" x="1992.9786962197452" y="-1353.3146870205596"/>
-              <y:Fill color="#FFCC00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="node_height" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="3813.3091979101337" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="1091.09326171875" x="-22.05416690953166" xml:space="preserve" y="3.0">def generateDDL = vars.get('DataModelDDL')
-def fKeyAsIndex = vars.get('DataModelDDLFKeyAsIndex')
-log.info('Loading "' + vars.get('DataModelGraphMLFile') + '" file');
-def graphMLFile = new File(vars.get('DataModelGraphMLFile'))
-def graphml = new XmlSlurper().parseText(graphMLFile.getText('UTF-8'))
-
-log.info('Node parsing started')
-def lineSeparator = System.getProperty('line.separator', '\n')
-def fieldSeparator = System.getProperty('field.separator', ';')
-def fieldDefinitions = [
-    '#'
-    , 'Designer Id'
-    , 'Entity'
-    , 'Entity Name'
-    , 'Entity API Name'
-    , 'Field Index'
-    , 'Field Name'
-    , 'Primary Key'
-    , 'Foreign Key'
-    , 'Indexed'
-    , 'Unique'
-    , 'Data Type'
-    , 'Data Length'
-    , 'Default Value'
-    , 'Required'
-    , 'Tracking'
-    , 'Description'
-].join(fieldSeparator)
-
-def entityDefinitions = [
-    'Designer Id'
-    , 'Entity'
-    , 'Name'
-    , 'API Name'
-    , 'Rank'
-    , 'Scope'
-    , 'Record Tracking'
-    , 'Impl. Status'
-    , 'Description'
-].join(fieldSeparator)
-
-def dataModelDDL = ''
-
-def isEntityKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Is Entity' &amp;&amp; it.@for == 'node'}
-def isCustomTypeKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Is Custom Type' &amp;&amp; it.@for == 'node'}
-def isEnumTypeKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Is Enum Type' &amp;&amp; it.@for == 'node'}
-def entityNameKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Entity Name' &amp;&amp; it.@for == 'node'}
-def entityLabelKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Entity Label' &amp;&amp; it.@for == 'node'}
-def entityScopeKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Business Object' &amp;&amp; it.@for == 'node'}
-def fieldNameKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Field Name' &amp;&amp; it.@for == 'node'}
-def fieldPKKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Primary Key' &amp;&amp; it.@for == 'node'}
-def fieldSKKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Secondary Key' &amp;&amp; it.@for == 'node'}
-def fieldFKKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Foreign Key' &amp;&amp; it.@for == 'node'}
-def fieldDataTypeKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Field Type' &amp;&amp; it.@for == 'node'}
-def fieldLengthKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Field Length' &amp;&amp; it.@for == 'node'}
-def fieldDefaultValueKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Default Value' &amp;&amp; it.@for == 'node'}
-def fieldIndexedKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Indexed' &amp;&amp; it.@for == 'node'}
-def fieldUniqueKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Unique' &amp;&amp; it.@for == 'node'}
-def fieldRequiredKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Required' &amp;&amp; it.@for == 'node'}
-def fieldTrackingKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Enable Tracking' &amp;&amp; it.@for == 'node'}
-def fieldNullableKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Nullable' &amp;&amp; it.@for == 'node'}
-def fieldDefKey = graphml.key.findAll {it -&gt; it.@'yfiles.type' == 'nodegraphics' &amp;&amp; it.@for == 'node'}
-def nodeDescriptionKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'description' &amp;&amp; it.@for == 'node'}
-def entityInheritFromKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Inherit From' &amp;&amp; it.@for == 'node'}
-def entityPartitionByKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Partition By' &amp;&amp; it.@for == 'node'}
-def entityPartitionTypeKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Partition Type' &amp;&amp; it.@for == 'node'}
-def entityGroupKey = graphml.key.findAll {it -&gt; it.@'attr.name' == 'Entity Group' &amp;&amp; it.@for == 'node'}
-
-def sortedNodes = graphml.graph.node.list().sort{it.data.findAll {d -&gt; d.@key == entityGroupKey.@id}}
-sortedNodes.eachWithIndex { node, nIndex -&gt; {
-    if(node.@'yfiles.foldertype' == 'group') {
-        def isEntity = node.data.findAll {it -&gt; it.@key == isEntityKey.@id}
-        def isCustomType = node.data.findAll {it -&gt; it.@key == isCustomTypeKey.@id}
-        def isEnumType = node.data.findAll {it -&gt; it.@key == isEnumTypeKey.@id}
-        
-        if(isEntity == 'true' || isCustomType == 'true' || isEnumType == 'true') {
-            def entityName = node.data.findAll {it -&gt; it.@key == entityNameKey.@id}
-            def unquotedEntityName = entityName.text().replaceAll('"', '')
-            def entityLabel = node.data.findAll {it -&gt; it.@key == entityLabelKey.@id}
-            def entityApiName = unquotedEntityName.split('_').collect{ it.capitalize() }.join('')
-            def recordTracking = node.data.findAll {it -&gt; it.@key == fieldTrackingKey.@id}
-            def entityBusinessScope = node.data.findAll {it -&gt; it.@key == entityScopeKey.@id}
-            def entityDescription = node.data.findAll {it -&gt; it.@key == nodeDescriptionKey.@id}
-            def entityInheritFrom = node.data.findAll {it -&gt; it.@key == entityInheritFromKey.@id}
-            def entityPartitionBy = node.data.findAll {it -&gt; it.@key == entityPartitionByKey.@id}
-            def entityPartitionType = node.data.findAll {it -&gt; it.@key == entityPartitionTypeKey.@id}
-            def entityGroup = node.data.findAll {it -&gt; it.@key == entityGroupKey.@id}
-            def entityRecord = [
-                node.@id
-                , entityLabel
-                , unquotedEntityName
-                , entityApiName
-                , entityGroup
-                , entityBusinessScope == 'true' ? 'Business' : 'Application'
-                , recordTracking == 'true' ? 'Yes' : 'No'
-                , 'No'
-                , '"' + entityDescription + '"'
-            ].join(fieldSeparator)
-            entityDefinitions = entityDefinitions + lineSeparator + entityRecord
-
-            if(generateDDL == 'yes') {
-                if(isCustomType == 'true') {
-                    dataModelDDL = dataModelDDL + lineSeparator + '-- ' + unquotedEntityName + ' type definition' + lineSeparator
-                    dataModelDDL = dataModelDDL + 'CREATE TYPE ' + entityName + ' AS ('
-                } else if(isEnumType == 'true') {
-                    dataModelDDL = dataModelDDL + lineSeparator + '-- ' + entityName + ' enum definition' + lineSeparator
-                    dataModelDDL = dataModelDDL + 'CREATE TYPE ' + entityName + ' AS ENUM ('
-                } else {
-                    dataModelDDL = dataModelDDL + lineSeparator + '-- ' + entityName + ' entity definition' + lineSeparator
-                    dataModelDDL = dataModelDDL + 'CREATE TABLE IF NOT EXISTS ' + entityName + ' ('
-                }
-            }
-            def ddlFieldSep = ','
-            def ddlFieldPKDef = []
-            def ddlEntityIndexes = []
-            def sortedFields = node.graph.node.list().sort{
-                it.data.findAll {d -&gt; d.@key == fieldDefKey.@id}[0].GenericNode.Geometry.@y.toFloat()
-            }
-            sortedFields.eachWithIndex { fieldNode, fIndex -&gt; {
-                def fieldDef = fieldNode.data.findAll {it -&gt; it.@key == fieldDefKey.@id}
-                if(fieldDef.size() &gt; 0) {
-                    def fieldName = fieldNode.data.findAll {it -&gt; it.@key == fieldNameKey.@id}
-                    def fieldPK = fieldNode.data.findAll {it -&gt; it.@key == fieldPKKey.@id}
-                    def fieldSK = fieldNode.data.findAll {it -&gt; it.@key == fieldSKKey.@id}
-                    def fieldFK = fieldNode.data.findAll {it -&gt; it.@key == fieldFKKey.@id}
-                    def fieldDataType = fieldNode.data.findAll {it -&gt; it.@key == fieldDataTypeKey.@id}
-                    def fieldIndexed = fieldNode.data.findAll {it -&gt; it.@key == fieldIndexedKey.@id}
-                    def fieldUnique = fieldNode.data.findAll {it -&gt; it.@key == fieldUniqueKey.@id}
-                    def fieldRequired = fieldNode.data.findAll {it -&gt; it.@key == fieldRequiredKey.@id}
-                    def fieldLength = fieldNode.data.findAll {it -&gt; it.@key == fieldLengthKey.@id}
-                    def fieldTracking = fieldNode.data.findAll {it -&gt; it.@key == fieldTrackingKey.@id}
-                    def fieldDefaultValue = fieldNode.data.findAll {it -&gt; it.@key == fieldDefaultValueKey.@id}
-                    def fieldDescription = fieldNode.data.findAll {it -&gt; it.@key == nodeDescriptionKey.@id}
-                    def fieldNullable = fieldNode.data.findAll {it -&gt; it.@key == fieldNullableKey.@id}
-                    
-                    def unquotedFieldName
-                    if ( fieldName == null || fieldName == '') {
-                        fieldName = fieldDef[0].GenericNode.NodeLabel[0]
-                        unquotedFieldName = fieldName
-                    } else {
-                        unquotedFieldName = fieldName.text().replaceAll('"', '')
-                    }
-                    if(fieldDataType == '') {
-                        if(fieldLength != '' &amp;&amp; fieldLength != '0') {
-                            fieldDataType = 'varchar'
-                        } else {
-                            fieldDataType = fieldDataTypeKey[0].default
-                        }
-                    }
-    	       	    def fieldRecord = [
-                        entityGroup
-                        , node.@id
-                        , entityLabel
-                        , entityApiName
-                        , unquotedEntityName
-                        , fIndex 
-                        , unquotedFieldName
-                        , fieldPK
-                        , fieldFK
-                        , fieldIndexed
-                        , fieldUnique
-                        , fieldDataType
-                        , fieldLength
-                        , fieldDefaultValue 
-                        , fieldRequired 
-                        , fieldTracking 
-                        , '"' + fieldDescription + '"'
-                    ].join(fieldSeparator)
-               	    fieldDefinitions = fieldDefinitions + lineSeparator + fieldRecord
-
-                    log.info('Field '+unquotedEntityName+'_'+unquotedFieldName+' -&gt; order : ' + fieldDef[0].GenericNode.Geometry.@y)
-
-                    if(generateDDL == 'yes') {
-                        def ddlFieldDef =  lineSeparator + '    '
-                        if(isEnumType == 'true') {
-                            ddlFieldDef = ddlFieldDef + '\'' + unquotedFieldName + '\''
-                        } else {
-                            ddlFieldDef = ddlFieldDef + fieldName + ' ' + fieldDataType
-                            if(fieldLength != '' &amp;&amp; fieldLength != '0') {
-                                ddlFieldDef = ddlFieldDef + '(' + fieldLength + ')'
-                            }
-
-                            if(fieldNullable.size() == 0 || fieldNullable == 'true') {
-                                ddlFieldDef = ddlFieldDef + ' NULL'
-                            } else {
-                                ddlFieldDef = ddlFieldDef + ' NOT NULL'
-                            }
-                            if(fieldDefaultValue != '') {
-                                ddlFieldDef = ddlFieldDef + ' DEFAULT ' + fieldDefaultValue
-                            }
-                        }
-
-                        dataModelDDL = dataModelDDL + ddlFieldDef + ddlFieldSep
-
-                        if(fieldPK == 'true' || fieldSK == 'true' ) {
-                            ddlFieldPKDef.add(fieldName)
-                        }
-
-                        if(fieldIndexed == 'true' || (fieldFK == 'true' &amp;&amp; fKeyAsIndex == 'yes')) {
-                            def entityIndex = 'CREATE '
-                            if(fieldUnique == 'true') {
-                                entityIndex = entityIndex + 'UNIQUE '
-                            }
-                            entityIndex = entityIndex + 'INDEX ' + unquotedEntityName + '_' + unquotedFieldName + '_idx ON ' + entityName + ' (' + fieldName + ');'
-                            ddlEntityIndexes.add(entityIndex)
-                        }
-                    }
-                }
-            }}
-
-            if(generateDDL == 'yes') {
-                if(ddlFieldPKDef.size() &gt; 0) {
-                    dataModelDDL = dataModelDDL + lineSeparator + '    ' + 'CONSTRAINT ' + unquotedEntityName + '_pkey PRIMARY KEY (' + ddlFieldPKDef.join(',') + ')'
-                } else {
-                    // remove last field separator (last commas)
-                    dataModelDDL = dataModelDDL.substring(0, dataModelDDL.length() - 1)
-                }
-                dataModelDDL = dataModelDDL + lineSeparator + ')'
-
-                if(entityInheritFrom != '') {
-                    dataModelDDL = dataModelDDL + lineSeparator + 'INHERITS (' + entityInheritFrom + ')'
-                }
-                if(entityPartitionBy != '') {
-                    dataModelDDL = dataModelDDL + lineSeparator + 'PARTITION BY ' + entityPartitionType + ' (' + entityPartitionBy + ')'
-                }
-                dataModelDDL = dataModelDDL + ';' + lineSeparator
-                if(ddlEntityIndexes.size() &gt; 0) {
-                    dataModelDDL = dataModelDDL + ddlEntityIndexes.join(lineSeparator) + lineSeparator
-                }
-            }
-        }
-    }
-}}
-log.info('Entity definitions : \n' + entityDefinitions)
-log.info('Field definitions : \n' + fieldDefinitions)
-log.info('DDL definitions : \n' + dataModelDDL)
-
-log.info('Writing DataModel entities to "' + vars.get('DataModelEntitiesCsvFile') + '" file');
-def csvFile = new File(vars.get('DataModelEntitiesCsvFile'))
-csvFile.write(entityDefinitions)
-
-log.info('Writing DataModel fields to "' + vars.get('DataModelFieldsCsvFile') + '" file');
-csvFile = new File(vars.get('DataModelFieldsCsvFile'))
-csvFile.write(fieldDefinitions)
-
-log.info('Writing DataModel DDL to "' + vars.get('DataModelSqlFile') + '" file');
-csvFile = new File(vars.get('DataModelSqlFile'))
-csvFile.write(dataModelDDL)
-</y:NodeLabel>
-              <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve"/>
-                <y:MethodLabel xml:space="preserve"/>
-              </y:UML>
-            </y:UMLClassNode>
-          </data>
-        </node>
-        <node id="n24::n1">
-          <data key="d26" xml:space="preserve"/>
-          <data key="d27"/>
-          <data key="d28">
-            <y:UMLNoteNode>
-              <y:Geometry height="28.0" width="209.9007574991847" x="1991.5834388383696" y="-1389.9987132910344"/>
-              <y:Fill color="#FFCC00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="159.337890625" x="4.0" xml:space="preserve" y="4.93359375">DataModelExporter.groovy<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="4.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-            </y:UMLNoteNode>
-          </data>
-        </node>
-        <node id="n24::n2">
-          <data key="d26" xml:space="preserve"/>
-          <data key="d27"/>
-          <data key="d28">
-            <y:UMLNoteNode>
-              <y:Geometry height="28.0" width="209.9007574991847" x="3069.963624119432" y="-1389.9987132910344"/>
-              <y:Fill color="#FFCC00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="141.935546875" x="4.0" xml:space="preserve" y="4.93359375">DataModelExporter.jmx<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="0.0" nodeRatioX="-0.5" nodeRatioY="0.0" offsetX="4.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-            </y:UMLNoteNode>
-          </data>
-        </node>
-        <node id="n24::n3">
-          <data key="d26" xml:space="preserve"/>
-          <data key="d27"/>
-          <data key="d28">
-            <y:UMLClassNode>
-              <y:Geometry height="2128.4651803552756" width="1046.9849278996867" x="3069.963624119432" y="-1349.3146870205599"/>
-              <y:Fill color="#FFCC00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="node_height" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="2193.408203125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="1300.267578125" x="-126.64132511265666" xml:space="preserve" y="3.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3"&gt;
-  &lt;hashTree&gt;
-    &lt;TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true"&gt;
-      &lt;stringProp name="TestPlan.comments"&gt;&lt;/stringProp&gt;
-      &lt;boolProp name="TestPlan.functional_mode"&gt;false&lt;/boolProp&gt;
-      &lt;boolProp name="TestPlan.tearDown_on_shutdown"&gt;true&lt;/boolProp&gt;
-      &lt;boolProp name="TestPlan.serialize_threadgroups"&gt;false&lt;/boolProp&gt;
-      &lt;elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true"&gt;
-        &lt;collectionProp name="Arguments.arguments"/&gt;
-      &lt;/elementProp&gt;
-      &lt;stringProp name="TestPlan.user_define_classpath"&gt;&lt;/stringProp&gt;
-    &lt;/TestPlan&gt;
-    &lt;hashTree&gt;
-      &lt;Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true"&gt;
-        &lt;collectionProp name="Arguments.arguments"&gt;
-          &lt;elementProp name="DataModelGraphMLFile" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelGraphMLFile&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel.graphml&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelEntitiesCsvFile" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelEntitiesCsvFile&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel-Entities.csv&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelFieldsCsvFile" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelFieldsCsvFile&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel-Fields.csv&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelSqlFile" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelSqlFile&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel.sql&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelEntitiesCsvFile0" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelEntitiesCsvFile0&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel-Entities.csv&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelFieldsCsvFile0" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelFieldsCsvFile0&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel-Fields.csv&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelSqlFile0" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelSqlFile0&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModel.sql&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="LogFile" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;LogFile&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataMoelExporter.log&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="CsvConverterScript" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;CsvConverterScript&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;DataModelExporter.groovy&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelDDL" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelDDL&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;yes&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-          &lt;elementProp name="DataModelDDLFKeyAsIndex" elementType="Argument"&gt;
-            &lt;stringProp name="Argument.name"&gt;DataModelDDLFKeyAsIndex&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.value"&gt;yes&lt;/stringProp&gt;
-            &lt;stringProp name="Argument.metadata"&gt;=&lt;/stringProp&gt;
-          &lt;/elementProp&gt;
-        &lt;/collectionProp&gt;
-      &lt;/Arguments&gt;
-      &lt;hashTree/&gt;
-      &lt;ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true"&gt;
-        &lt;stringProp name="ThreadGroup.on_sample_error"&gt;continue&lt;/stringProp&gt;
-        &lt;elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true"&gt;
-          &lt;boolProp name="LoopController.continue_forever"&gt;false&lt;/boolProp&gt;
-          &lt;stringProp name="LoopController.loops"&gt;1&lt;/stringProp&gt;
-        &lt;/elementProp&gt;
-        &lt;stringProp name="ThreadGroup.num_threads"&gt;1&lt;/stringProp&gt;
-        &lt;stringProp name="ThreadGroup.ramp_time"&gt;1&lt;/stringProp&gt;
-        &lt;boolProp name="ThreadGroup.scheduler"&gt;false&lt;/boolProp&gt;
-        &lt;stringProp name="ThreadGroup.duration"&gt;&lt;/stringProp&gt;
-        &lt;stringProp name="ThreadGroup.delay"&gt;&lt;/stringProp&gt;
-        &lt;boolProp name="ThreadGroup.same_user_on_next_iteration"&gt;true&lt;/boolProp&gt;
-      &lt;/ThreadGroup&gt;
-      &lt;hashTree&gt;
-        &lt;JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true"&gt;
-          &lt;stringProp name="scriptLanguage"&gt;groovy&lt;/stringProp&gt;
-          &lt;stringProp name="parameters"&gt;&lt;/stringProp&gt;
-          &lt;stringProp name="filename"&gt;${CsvConverterScript}&lt;/stringProp&gt;
-          &lt;stringProp name="cacheKey"&gt;true&lt;/stringProp&gt;
-          &lt;stringProp name="script"&gt;&lt;/stringProp&gt;
-        &lt;/JSR223PostProcessor&gt;
-        &lt;hashTree/&gt;
-        &lt;DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true"&gt;
-          &lt;boolProp name="displayJMeterProperties"&gt;false&lt;/boolProp&gt;
-          &lt;boolProp name="displayJMeterVariables"&gt;true&lt;/boolProp&gt;
-          &lt;boolProp name="displaySystemProperties"&gt;false&lt;/boolProp&gt;
-        &lt;/DebugSampler&gt;
-        &lt;hashTree/&gt;
-        &lt;ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true"&gt;
-          &lt;boolProp name="ResultCollector.error_logging"&gt;true&lt;/boolProp&gt;
-          &lt;objProp&gt;
-            &lt;name&gt;saveConfig&lt;/name&gt;
-            &lt;value class="SampleSaveConfiguration"&gt;
-              &lt;time&gt;true&lt;/time&gt;
-              &lt;latency&gt;true&lt;/latency&gt;
-              &lt;timestamp&gt;true&lt;/timestamp&gt;
-              &lt;success&gt;true&lt;/success&gt;
-              &lt;label&gt;true&lt;/label&gt;
-              &lt;code&gt;true&lt;/code&gt;
-              &lt;message&gt;true&lt;/message&gt;
-              &lt;threadName&gt;true&lt;/threadName&gt;
-              &lt;dataType&gt;true&lt;/dataType&gt;
-              &lt;encoding&gt;false&lt;/encoding&gt;
-              &lt;assertions&gt;true&lt;/assertions&gt;
-              &lt;subresults&gt;true&lt;/subresults&gt;
-              &lt;responseData&gt;false&lt;/responseData&gt;
-              &lt;samplerData&gt;false&lt;/samplerData&gt;
-              &lt;xml&gt;false&lt;/xml&gt;
-              &lt;fieldNames&gt;true&lt;/fieldNames&gt;
-              &lt;responseHeaders&gt;false&lt;/responseHeaders&gt;
-              &lt;requestHeaders&gt;false&lt;/requestHeaders&gt;
-              &lt;responseDataOnError&gt;false&lt;/responseDataOnError&gt;
-              &lt;saveAssertionResultsFailureMessage&gt;true&lt;/saveAssertionResultsFailureMessage&gt;
-              &lt;assertionsResultsToSave&gt;0&lt;/assertionsResultsToSave&gt;
-              &lt;bytes&gt;true&lt;/bytes&gt;
-              &lt;sentBytes&gt;true&lt;/sentBytes&gt;
-              &lt;url&gt;true&lt;/url&gt;
-              &lt;threadCounts&gt;true&lt;/threadCounts&gt;
-              &lt;idleTime&gt;true&lt;/idleTime&gt;
-              &lt;connectTime&gt;true&lt;/connectTime&gt;
-            &lt;/value&gt;
-          &lt;/objProp&gt;
-          &lt;stringProp name="filename"&gt;${LogFile}&lt;/stringProp&gt;
-        &lt;/ResultCollector&gt;
-        &lt;hashTree/&gt;
-      &lt;/hashTree&gt;
-    &lt;/hashTree&gt;
-  &lt;/hashTree&gt;
-&lt;/jmeterTestPlan&gt;
-</y:NodeLabel>
-              <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-                <y:AttributeLabel xml:space="preserve"/>
-                <y:MethodLabel xml:space="preserve"/>
-              </y:UML>
-            </y:UMLClassNode>
-          </data>
-        </node>
-        <node id="n24::n4">
-          <data key="d26" xml:space="preserve"/>
-          <data key="d27"/>
-          <data key="d28">
-            <y:UMLNoteNode>
-              <y:Geometry height="43.78308213166156" width="330.82757617554853" x="3069.963624119432" y="809.1504933347157"/>
-              <y:Fill color="#FFCC00" transparent="false"/>
-              <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="273.625" x="4.0" xml:space="preserve" y="4.0">Usage:
-/path/to/jmeter -n -t DataModelExporter.jmx<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="-0.5" labelRatioY="-0.5" nodeRatioX="-0.5" nodeRatioY="-0.5" offsetX="4.0" offsetY="4.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-            </y:UMLNoteNode>
-          </data>
-        </node>
-      </graph>
     </node>
     <edge id="e0" source="n1::n0" target="n3::n2">
       <data key="d32">
@@ -4439,141 +4094,6 @@ csvFile.write(dataModelDDL)
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e0" source="n21::n0" target="n21::n2">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="82.54145805642631" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e1" source="n21::n2" target="n21::n1">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="crows_foot_many" target="dash"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e2" source="n21::n2" target="n21::n5">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.05103370517088024" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="crows_foot_many" target="dash"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e3" source="n21::n3" target="n21::n2">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="-3.031671779711246" sy="3.160815179169731" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e4" source="n21::n5" target="n21::n6">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many_optional"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e5" source="n21::n5" target="n21::n0">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many_optional"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e6" source="n21::n6" target="n21::n1">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many_optional"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e7" source="n21::n6" target="n21::n4">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_optional"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::e8" source="n21::n6" target="n21::n0">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="3.0"/>
-          <y:Arrows source="dash" target="crows_foot_many_optional"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::n7::e0" source="n21::n7::n0" target="n21::n7::n1">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#808080" type="line" width="2.0"/>
-          <y:Arrows source="dash" target="crows_foot_many"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="12.865234375" x="102.51753754016704" xml:space="preserve" y="-27.1030818079073">N<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="18.036645925925995" distanceToCenter="true" position="left" ratio="1.0" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="11.587890625" x="7.44650928700753" xml:space="preserve" y="-27.213274558649005">1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="6.283185307179586" distance="9.080432426667585" distanceToCenter="false" position="left" ratio="0.02468679757176288" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::n7::e1" source="n21::n7::n5" target="n21::n7::n2">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#808080" type="line" width="2.0"/>
-          <y:Arrows source="dash" target="crows_foot_many_optional"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.328125" x="73.64669487268225" xml:space="preserve" y="-23.51405135971936">0 or N<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="5.3812334537037705" distanceToCenter="false" position="left" ratio="0.9798998593087158" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::n7::e2" source="n21::n7::n6" target="n21::n7::n3">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#808080" type="line" width="2.0"/>
-          <y:Arrows source="dash" target="dash"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="11.587890625" x="101.03841895813116" xml:space="preserve" y="-28.299368763382972">1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="10.166575083333106" distanceToCenter="false" position="left" ratio="0.9720969431186387" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="n21::n7::e3" source="n21::n7::n7" target="n21::n7::n4">
-      <data key="d32">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#808080" type="line" width="2.0"/>
-          <y:Arrows source="dash" target="crows_foot_optional"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="39.05078125" x="74.08308846367095" xml:space="preserve" y="-25.723505128128863">0 or 1<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/></y:LabelModel><y:ModelParameter><y:SmartEdgeLabelModelParameter angle="0.0" distance="7.590674638888915" distanceToCenter="false" position="left" ratio="0.9684693048040418" segment="-1"/></y:ModelParameter><y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
