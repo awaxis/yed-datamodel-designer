@@ -1,5 +1,8 @@
 # yed-datamodel-designer
 DataModel designer for yEd Graph Editor
+
+![DataModelDesigner](https://github.com/awaxis/yed-datamodel-designer/blob/main/DataModelDesigner.png?raw=true)
+
 A conceptual data model diagram created with yEd helps to design and manage database entities and their relationships.
 
 Each group represents a database table or entity, nodes inside group represent table fields, while edges represent the relationships between tables.
