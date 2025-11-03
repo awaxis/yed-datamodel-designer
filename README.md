@@ -13,9 +13,41 @@ Custom properties are used to add more detail about the entities and fields.
 
 Export your design to SQL or CSV
 --
-The datamodel can be exported to CSV and/or SQL (PostgreSQL dialect) using JMeter script
+The datamodel can be exported to CSV and/or SQL (PostgreSQL dialect) using Groovy script
 
 Usage
 ---
-
-jmeter -n -t /path/to/DataModelExporter.jmx
+```
+groovy DataModelExporter.groovy <GraphMLFile> <OutputFile>
+  -d, --output-dir=<outputDir>
+                             Output directory for generated files
+      -ddl, --generate-ddl   Output SQL file with Entities definitions(default:
+                               false)
+      -ecf, --entities-csv-file=<entitiesCsvFile>
+                             Output CSV file with Entities definitions
+      -esf, --entities-sql-file=<entitiesSqlFile>
+                             Output SQL file with Entities definitions
+      -fcf, --fields-csv-file=<fieldsCsvFile>
+                             Output CSV file with Entities fields definitions
+      -fkai, --foreign-key-as-index
+                             Generate Foreign Key as Index in DDL SQL file
+                               (default: false)
+      -fls, --field-list-separator=<fieldListSeparator>
+                             Field list separator for the output CSV file
+      -fs, --field-separator=<fieldSeparator>
+                             Field separator for the output CSV file
+  -g, --graphml-file=<graphMLFile>
+                             Input GraphML file with DataModel
+  -h, --help                 Show usage information
+      -ld, --log-dir=<logDir>
+                             Output directory for log files
+      -lf, --log-file=<logFile>
+                             Log file for the application
+      -ls, --line-separator=<lineSeparator>
+                             Line separator for the output CSV file
+```
+Examples:
+```
+# groovy DataModelExporter.groovy -g=DataModelDesigner.graphml -d=dist -ld=log -fs='\t' -fls=';' -ddl -fkai
+# groovy DataModelExporter.groovy -g=DataModelDesigner.graphml -d=dist -ld=log -fs=',' -fls='|' -ecf=entities.csv -fcf=fields.csv
+```

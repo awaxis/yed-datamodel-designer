@@ -1,12 +1,106 @@
-def generateDDL = vars.get('DataModelDDL')
-def fKeyAsIndex = vars.get('DataModelDDLFKeyAsIndex')
-log.info('Loading "' + vars.get('DataModelGraphMLFile') + '" file');
-def graphMLFile = new File(vars.get('DataModelGraphMLFile'))
+@GrabConfig(systemClassLoader=true)
+@Grab('org.codehaus.groovy:groovy-cli-picocli:3.0.1')
+@Grab('info.picocli:picocli:4.2.0')
+import groovy.cli.picocli.CliBuilder;
+import groovy.xml.*;
+import java.util.logging.Logger;
+import java.util.logging.FileHandler;
+import java.util.logging.SimpleFormatter;
+
+def cli = new CliBuilder(usage:'DataModelExporter <GraphMLFile> <OutputFile>');
+cli.with {
+    h   longOpt: 'help', 'Show usage information'
+    g   longOpt: 'graphml-file', args: 1, argName: 'graphMLFile', type: String, required: true, 'Input GraphML file with DataModel'
+    d   longOpt: 'output-dir', args: 1, argName: 'outputDir', type: String, required: false, 'Output directory for generated files'
+    ld  longOpt: 'log-dir', args: 1, argName: 'logDir', type: String, required: false, 'Output directory for log files'
+    lf  longOpt: 'log-file', args: 1, argName: 'logFile', type: String, required: false, 'Log file for the application'
+    ecf longOpt: 'entities-csv-file', args: 1, argName: 'entitiesCsvFile', type: String, required: false, 'Output CSV file with Entities definitions'
+    fcf longOpt: 'fields-csv-file', args: 1, argName: 'fieldsCsvFile', type: String, required: false, 'Output CSV file with Entities fields definitions'
+    esf longOpt: 'entities-sql-file', args: 1, argName: 'entitiesSqlFile', type: String, required: false, 'Output SQL file with Entities definitions'
+    ddl longOpt: 'generate-ddl', args: 0, argName: 'generateDDL', type: Boolean, required: false, 'Output SQL file with Entities definitions(default: false)'
+    fkai longOpt: 'foreign-key-as-index', args: 0, argName: 'foreignKeyAsIndex', type: Boolean, required: false, 'Generate Foreign Key as Index in DDL SQL file (default: false)'
+    fs longOpt: 'field-separator', args: 1, argName: 'fieldSeparator', type: String, required: false, 'Field separator for the output CSV file'
+    ls longOpt: 'line-separator', args: 1, argName: 'lineSeparator', type: String, required: false, 'Line separator for the output CSV file'
+    fls longOpt: 'field-list-separator', args: 1, argName: 'fieldListSeparator', type: String, required: false, 'Field list separator for the output CSV file'
+}
+
+def args = cli.parse(args);
+assert args != null : 'Invalid arguments. Use -h for help.'
+assert args.g || args.graphMLFile : 'GraphML file is required. Use -g or --graphml-file.'
+
+def dataModelGraphMLFileWithoutExt = args.g.take(args.g.lastIndexOf('.'))
+
+System.setProperty("java.util.logging.SimpleFormatter.format", '%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS [%4$-6s] %5$s%6$s%n');
+Logger log = Logger.getLogger("DataModelExporter")
+def logFileName = args.lf
+if(isNullOrEmpty(logFileName)) {
+    logFileName = dataModelGraphMLFileWithoutExt + '.log'
+}
+if(!isNullOrEmpty(args.ld)) {
+    logFileName = args.ld + '/' + logFileName
+}
+FileHandler fh = new FileHandler(logFileName)
+log.addHandler(fh)
+SimpleFormatter formatter = new SimpleFormatter()
+fh.setFormatter(formatter)
+
+log.info('Loading "' + args.g + '" file');
+def graphMLFile = new File(args.g)
 def graphml = new XmlSlurper().parseText(graphMLFile.getText('UTF-8'))
 
+// load the document metadata
+def documentVersionKey = graphml.key.findAll {it -> it.@'attr.name' == 'Version' && it.@for == 'graph'}
+def documentRevisionKey = graphml.key.findAll {it -> it.@'attr.name' == 'Revision' && it.@for == 'graph'}
+def documentTitleKey = graphml.key.findAll {it -> it.@'attr.name' == 'Title' && it.@for == 'graph'}
+def documentVersion = graphml.graph.data.findAll {it -> it.@key == documentVersionKey.@id}
+def documentTitle = graphml.graph.data.findAll {it -> it.@key == documentTitleKey.@id}
+def documentRevision = graphml.graph.data.findAll {it -> it.@key == documentRevisionKey.@id}
+
+if(documentTitle != null && documentTitle != '') {
+    dataModelGraphMLFileWithoutExt = documentTitle.text().replaceAll(' ', '-')
+    if(documentVersion != null && documentVersion != '') {
+        dataModelGraphMLFileWithoutExt = dataModelGraphMLFileWithoutExt + '-v' + documentVersion.text()
+    }
+    if(documentRevision != null && documentRevision != '') {
+        dataModelGraphMLFileWithoutExt = dataModelGraphMLFileWithoutExt + 'r' + documentRevision.text()
+    }
+}
+
+def dataModelEntitiesCsvFile = args.ecf
+if(isNullOrEmpty(dataModelEntitiesCsvFile)) {
+    dataModelEntitiesCsvFile = dataModelGraphMLFileWithoutExt + '-Entities.csv'
+}
+def dataModelFieldsCsvFile = args.fcf
+if(isNullOrEmpty(dataModelFieldsCsvFile)) {
+    dataModelFieldsCsvFile = dataModelGraphMLFileWithoutExt + '-Fields.csv'
+}
+def dataModelSqlFile = args.esf
+if(isNullOrEmpty(dataModelSqlFile)) {
+    dataModelSqlFile = dataModelGraphMLFileWithoutExt + '.sql'
+}
+
+if(!isNullOrEmpty(args.d)) {
+    dataModelEntitiesCsvFile = args.d + '/' + dataModelEntitiesCsvFile
+    dataModelFieldsCsvFile = args.d + '/' + dataModelFieldsCsvFile
+    dataModelSqlFile = args.d + '/' + dataModelSqlFile
+}
+
+def generateDDL = (args.ddl instanceof Boolean ? args.ddl : false)
+def fKeyAsIndex = (args.fkai instanceof Boolean ? args.fkai : false)
+
+log.info('DataModel Entities file: ' + dataModelEntitiesCsvFile);
+log.info('DataModel fields file: ' + dataModelFieldsCsvFile);
+log.info('Generate DDL SQL file: ' + generateDDL);
+if(generateDDL) {
+    log.info('DataModel DDL file: ' + dataModelSqlFile);
+}
+
+static boolean isNullOrEmpty(String str) { return (str == null || str.allWhitespace) } 
+
 log.info('Node parsing started')
-def lineSeparator = System.getProperty('line.separator', '\n')
-def fieldSeparator = System.getProperty('field.separator', ';')
+def lineSeparator = args.lineSeparator != null && args.lineSeparator != '' && args.lineSeparator != false ? args.lineSeparator.replace('\\n', '\n').replace('\\r', '\r') : System.getProperty('line.separator', '\n')
+def fieldSeparator = args.fieldSeparator != null && args.fieldSeparator != '' && args.fieldSeparator != false ? args.fieldSeparator.replace('\\t', '\t') : System.getProperty('field.separator', ';')
+def fieldListSeparator = args.fieldListSeparator != null && args.fieldListSeparator != '' && args.fieldListSeparator != false ? args.fieldListSeparator.replace('\\t', '\t') : ','
 def fieldDefinitions = [
     '#'
     , 'Designer Id'
@@ -98,7 +192,7 @@ sortedNodes.eachWithIndex { node, nIndex -> {
             ].join(fieldSeparator)
             entityDefinitions = entityDefinitions + lineSeparator + entityRecord
 
-            if(generateDDL == 'yes') {
+            if(generateDDL) {
                 if(isCustomType == 'true') {
                     dataModelDDL = dataModelDDL + lineSeparator + '-- ' + unquotedEntityName + ' type definition' + lineSeparator
                     dataModelDDL = dataModelDDL + 'CREATE TYPE ' + entityName + ' AS ('
@@ -168,9 +262,9 @@ sortedNodes.eachWithIndex { node, nIndex -> {
                     ].join(fieldSeparator)
                	    fieldDefinitions = fieldDefinitions + lineSeparator + fieldRecord
 
-                    log.info('Field '+unquotedEntityName+'_'+unquotedFieldName+' -> order : ' + fieldDef[0].GenericNode.Geometry.@y)
+                    log.info('Field ' + unquotedEntityName + '_' + unquotedFieldName + ' -> order : ' + fieldDef[0].GenericNode.Geometry.@y)
 
-                    if(generateDDL == 'yes') {
+                    if(generateDDL) {
                         def ddlFieldDef =  lineSeparator + '    '
                         if(isEnumType == 'true') {
                             ddlFieldDef = ddlFieldDef + '\'' + unquotedFieldName + '\''
@@ -179,11 +273,12 @@ sortedNodes.eachWithIndex { node, nIndex -> {
                             if(fieldLength != '' && fieldLength != '0') {
                                 ddlFieldDef = ddlFieldDef + '(' + fieldLength + ')'
                             }
-
-                            if(fieldNullable.size() == 0 || fieldNullable == 'true') {
-                                ddlFieldDef = ddlFieldDef + ' NULL'
-                            } else {
-                                ddlFieldDef = ddlFieldDef + ' NOT NULL'
+                            if(isCustomType != 'true') {
+                                if(fieldNullable.size() == 0 || fieldNullable == 'true') {
+                                    ddlFieldDef = ddlFieldDef + ' NULL'
+                                } else {
+                                    ddlFieldDef = ddlFieldDef + ' NOT NULL'
+                                }
                             }
                             if(fieldDefaultValue != '') {
                                 ddlFieldDef = ddlFieldDef + ' DEFAULT ' + fieldDefaultValue
@@ -196,7 +291,7 @@ sortedNodes.eachWithIndex { node, nIndex -> {
                             ddlFieldPKDef.add(fieldName)
                         }
 
-                        if(fieldIndexed == 'true' || (fieldFK == 'true' && fKeyAsIndex == 'yes')) {
+                        if(fieldIndexed == 'true' || (fieldFK == 'true' && fKeyAsIndex)) {
                             def entityIndex = 'CREATE '
                             if(fieldUnique == 'true') {
                                 entityIndex = entityIndex + 'UNIQUE '
@@ -208,7 +303,7 @@ sortedNodes.eachWithIndex { node, nIndex -> {
                 }
             }}
 
-            if(generateDDL == 'yes') {
+            if(generateDDL) {
                 if(ddlFieldPKDef.size() > 0) {
                     dataModelDDL = dataModelDDL + lineSeparator + '    ' + 'CONSTRAINT ' + unquotedEntityName + '_pkey PRIMARY KEY (' + ddlFieldPKDef.join(',') + ')'
                 } else {
@@ -231,18 +326,20 @@ sortedNodes.eachWithIndex { node, nIndex -> {
         }
     }
 }}
+
+log.info('Writing DataModel entities to "' + dataModelEntitiesCsvFile + '" file');
 log.info('Entity definitions : \n' + entityDefinitions)
+def outputFile = new File(dataModelEntitiesCsvFile)
+outputFile.write(entityDefinitions)
+
+log.info('Writing DataModel fields to "' + dataModelFieldsCsvFile + '" file');
 log.info('Field definitions : \n' + fieldDefinitions)
-log.info('DDL definitions : \n' + dataModelDDL)
+outputFile = new File(dataModelFieldsCsvFile)
+outputFile.write(fieldDefinitions)
 
-log.info('Writing DataModel entities to "' + vars.get('DataModelEntitiesCsvFile') + '" file');
-def csvFile = new File(vars.get('DataModelEntitiesCsvFile'))
-csvFile.write(entityDefinitions)
-
-log.info('Writing DataModel fields to "' + vars.get('DataModelFieldsCsvFile') + '" file');
-csvFile = new File(vars.get('DataModelFieldsCsvFile'))
-csvFile.write(fieldDefinitions)
-
-log.info('Writing DataModel DDL to "' + vars.get('DataModelSqlFile') + '" file');
-csvFile = new File(vars.get('DataModelSqlFile'))
-csvFile.write(dataModelDDL)
+if(generateDDL) {
+    log.info('DDL definitions : \n' + dataModelDDL)
+    log.info('Writing DataModel DDL to "' + dataModelSqlFile + '" file');
+    outputFile = new File(dataModelSqlFile)
+    outputFile.write(dataModelDDL)
+}
